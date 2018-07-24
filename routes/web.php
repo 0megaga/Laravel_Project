@@ -11,6 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::get('/', function () {
+        return view('vue1');
+    });
+
+//get param
+
+    Route::get('{n}', function( $n ) { return 'je suis la page ' . $n . ' !'; })->where('n', '[1-3]');
+
+//name route
+
+    /*Route::get('/', ['as' => 'home', function(){
+        return 'Je suis la page d\'accueil';
+    }]);*/
+
+// get php var
+
+    Route::get('article/{n}', function( $n ){
+        return view('article')->with('numero', $n);
+        //return view('article')->withNumero( $n );
+        //return view('article', [ 'numero' => $n ] );
+    })->where('n', '[0-9]+');
