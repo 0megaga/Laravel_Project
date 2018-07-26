@@ -1,9 +1,9 @@
-@extends('template')
+@extends('template)
 
-@section('titre')
+@section('tire')
     Les articles
 @endsection
 
 @section('contenu')
-    <p>C'est l'article n° {{ $numero }}</p>
+    <p>C'est l'article n°{{ $numero }}</p>
 @endsection
