@@ -1,9 +1,9 @@
-@extends('template)
+@extends('template')
 
-@section('tire')
+@section('titre')
     Les factures
 @endsection
 
 @section('contenu')
-    <p>C'est la facture n°{{ $numero }}</p>
+    <p>C'est la facture n° {{ $numero }}</p>
 @endsection

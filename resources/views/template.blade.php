@@ -5,6 +5,6 @@
     <title>@yield('titre')</title>
 </head>
 <body>
-    @yield('contenu')
+@yield('contenu')
 </body>
 </html>
