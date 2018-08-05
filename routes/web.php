@@ -34,7 +34,7 @@
     })->where('n', '[0-9]+');*/
 
     Route::get('facture/{n}', function ( $n ) {
-        return view('facture')->withNumero( $n );
+        return view('facture')->with( 'numero', $n );
     });
 
 // call controller
@@ -43,6 +43,11 @@
 
 // name controller route
 
-    Route::get( '/', ['use' => 'WelcomeController@index', 'as' => 'home'] );
+    Route::get( '/', ['uses' => 'WelcomeController@index', 'as' => 'home'] );
 
     Route::get( 'article/{n}', 'ArticleController@show' )->where('n', '[0-9]+');
+
+// Form route
+
+    Route::get('users', 'UsersController@getInfos');
+    Route::post('users', 'UsersController@postInfos');
