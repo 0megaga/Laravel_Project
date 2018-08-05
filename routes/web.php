@@ -51,3 +51,8 @@
 
     Route::get('users', 'UsersController@getInfos');
     Route::post('users', 'UsersController@postInfos');
+
+// Validation route
+
+    Route::get('contact', 'ContactController@getForm');
+    Route::post('contact', 'ContactController@postForm');
